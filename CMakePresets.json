@@ -1,0 +1,35 @@
+{
+  "version": 5,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "dev-universal",
+      "hidden": true,
+      "description": "helpful configuration options to use during development",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_COMPILE_WARNING_AS_ERROR": true
+      }
+    },
+    {
+      "name": "dev-default",
+      "inherits": "dev-universal",
+      "description": "helpful default development compilation settings",
+      "cacheVariables": {
+        "CMAKE_CXX_FLAGS": "-Wall -Wextra -Werror -Wpedantic"
+      }
+    },
+    {
+      "name": "dev-msvc",
+      "inherits": "dev-universal",
+      "description": "dev-default, but for msvc",
+      "cacheVariables": {
+        "CMAKE_CXX_FLAGS": "/W4 /WX" 
+      }
+    }
+  ]
+}

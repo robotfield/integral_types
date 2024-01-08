@@ -1,3 +1,9 @@
+CMakeUserPresets.json
+compile_commands.json
+build/
+build/**
+.cache/
+## GitHub auto-generated:
 # Prerequisites
 *.d
 
