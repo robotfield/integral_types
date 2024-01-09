@@ -12,9 +12,8 @@ namespace integral_types {
 
 // bit_sizeof
 template <typename T>
-struct bit_sizeof {
-  static constexpr std::size_t value = CHAR_BIT * sizeof(T);
-};
+struct bit_sizeof
+  : std::integral_constant<std::size_t, CHAR_BIT * sizeof(T)> {};
 
 #if __cplusplus >= 201703L
 template <typename T>
