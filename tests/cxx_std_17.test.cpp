@@ -57,7 +57,7 @@ static_assert(
 
 static_assert(
   always_integral<
-    int_t,
+    int_exact_t,
     signed char,
     signed short,
     signed int,
@@ -66,7 +66,7 @@ static_assert(
   "int_t failed cxx_std_17 compilation check -- not an integral type");
 static_assert(
   always_integral<
-    uint_t,
+    uint_exact_t,
     unsigned char,
     unsigned short,
     unsigned int,
@@ -83,7 +83,7 @@ static_assert(
 
 static_assert(
   same_size_invariant<
-    int_t,
+    int_exact_t,
     signed char,
     signed short,
     signed int,
@@ -93,7 +93,7 @@ static_assert(
   "type does not yield a type of the same bit size");
 static_assert(
   same_size_invariant<
-    uint_t,
+    uint_exact_t,
     unsigned char,
     unsigned short,
     unsigned int,

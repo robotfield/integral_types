@@ -169,7 +169,7 @@ using find_first_leq_bit_sizeof_t =
 // Integral types matching the supplied number of bits exactly, compilation
 // error otherwise
 template <std::size_t bits>
-using int_t = find_exact_bit_sizeof_t<
+using int_exact_t = find_exact_bit_sizeof_t<
   bits,
   signed char,
   signed short,
@@ -177,7 +177,7 @@ using int_t = find_exact_bit_sizeof_t<
   signed long,
   signed long long>;
 template <std::size_t bits>
-using uint_t = find_exact_bit_sizeof_t<
+using uint_exact_t = find_exact_bit_sizeof_t<
   bits,
   unsigned char,
   unsigned short,
@@ -187,7 +187,7 @@ using uint_t = find_exact_bit_sizeof_t<
 
 // Integral types with at least the supplied number of bits, compilation error
 // otherwise
-template <std::size_t bits>
+template <std::size_t bits = 0>
 using int_least_t = find_first_geq_bit_sizeof_t<
   bits,
   signed char,
@@ -195,7 +195,7 @@ using int_least_t = find_first_geq_bit_sizeof_t<
   signed int,
   signed long,
   signed long long>;
-template <std::size_t bits>
+template <std::size_t bits = 0>
 using uint_least_t = find_first_geq_bit_sizeof_t<
   bits,
   unsigned char,
