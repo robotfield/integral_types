@@ -21,7 +21,7 @@ Include(FetchContent)
 FetchContent_Declare(
     integral_types
     GIT_REPOSITORY https://github.com/robotfield/integral_types.git
-    GIT_TAG 1.0.0
+    GIT_TAG v1.0.0
 )
 ```
 > ...
