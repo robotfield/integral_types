@@ -1,3 +1,6 @@
+// Copyright (C) 2024 Rosalyn Botfield
+// SPDX-License-Identifier: MIT
+
 #ifndef INTEGRAL_TYPES_HPP
 #define INTEGRAL_TYPES_HPP
 
@@ -12,8 +15,7 @@ namespace integral_types {
 
 // bit_sizeof
 template <typename T>
-struct bit_sizeof
-  : std::integral_constant<std::size_t, CHAR_BIT * sizeof(T)> {};
+using bit_sizeof = std::integral_constant<std::size_t, CHAR_BIT * sizeof(T)>;
 
 #if __cplusplus >= 201703L
 template <typename T>

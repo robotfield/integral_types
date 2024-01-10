@@ -3,8 +3,9 @@ cmake_minimum_required(VERSION 3.21)
 
 project(
   integral_types
-  VERSION 0.0.0 
+  VERSION 1.0.0 
   DESCRIPTION "Like cstdint, but templated on the number of bits"
+  HOMEPAGE_URL https://github.com/robotfield/integral_types
   LANGUAGES CXX
 )
 
